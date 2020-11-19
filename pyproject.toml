@@ -4,9 +4,12 @@ version = "0.1.0"
 description = "Docker executor for PySRIM"
 authors = ["Angus Hollands <goosey15@gmail.com>"]
 license = "MIT"
+packages = [
+    { include="srim" }
+]
 
 [tool.poetry.dependencies]
-python = "3.6"
+python = "^3.6"
 pysrim = "^0.5.10"
 
 [tool.poetry.dev-dependencies]
