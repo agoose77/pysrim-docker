@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pysrim-docker"
-version = "0.1.2"
+version = "0.1.3"
 description = "Docker executor for PySRIM"
 readme = "README.md"
 repository = "https://github.com/agoose77/pysrim-docker"
