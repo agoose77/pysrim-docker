@@ -1,4 +1,9 @@
 # pysrim-docker
+[![pypi-badge][]][pypi] 
+
+[pypi-badge]: https://img.shields.io/pypi/v/pysrim-docker
+[pypi]: https://pypi.org/project/pysrim-docker
+
 Docker executor for PySRIM
 
 ## Getting Started
