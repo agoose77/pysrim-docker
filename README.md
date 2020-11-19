@@ -2,10 +2,10 @@
 Docker executor for PySRIM
 
 ## Getting Started
-To use this package, simply replace your `SR` or `TRIM` imports with those from `pysrim_docker`, e.g.
+To use this package, simply replace your `SR` or `TRIM` imports with those from `srim.docker`, e.g.
 ```python
 
-from pysrim_docker import TRIM
+from srim.docker import TRIM
 
 trim = TRIM(...)
 ```
