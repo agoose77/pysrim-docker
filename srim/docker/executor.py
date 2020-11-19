@@ -21,8 +21,6 @@ class DockerExecutor:
 shopt -s extglob globstar nullglob
 set -eu
 
-pwd > pwd
-
 # Copy inputs
 cp -R "{directory}/." .
 
