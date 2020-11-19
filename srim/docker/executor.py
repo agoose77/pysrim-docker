@@ -41,13 +41,14 @@ cp -n **/*.{{IN,txt}} "{directory}/" || true
     def results_cls(self):
         raise NotImplementedError
 
-    def run(self, *args, mount_path="/usr/local/src/srim", **kwargs):
-        local_path = tempfile.mkdtemp()
+    def run(self, *args, output_path=None, mount_path="/usr/local/src/srim", **kwargs):
+        if output_path is None:
+            output_path = tempfile.mkdtemp()
 
         srim_directory, srim_executable = os.path.split(self.executable_path)
         assert srim_directory and srim_executable
 
-        with cwd_as(local_path):
+        with cwd_as(output_path):
             self._prepare_input_files()
 
             # Make sure compatible with Windows, OSX, and Linux
@@ -58,7 +59,7 @@ cp -n **/*.{{IN,txt}} "{directory}/" || true
                     "run",
                     "--rm",
                     "--volume",
-                    f"{local_path}:{mount_path}",
+                    f"{output_path}:{mount_path}",
                     "--workdir",
                     srim_directory,
                     self.docker_image,
@@ -70,4 +71,4 @@ cp -n **/*.{{IN,txt}} "{directory}/" || true
                 ]
             )
 
-        return self.results_cls(local_path)
+        return self.results_cls(output_path)
