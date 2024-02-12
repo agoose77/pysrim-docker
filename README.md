@@ -6,6 +6,10 @@
 
 Docker executor for PySRIM
 
+
+> [!WARNING]  
+> This package has been replaced by https://github.com/agoose77/pysrim-executor
+
 ## Getting Started
 To use this package, simply replace your `SR` or `TRIM` imports with those from `srim.docker`, e.g.
 ```python
