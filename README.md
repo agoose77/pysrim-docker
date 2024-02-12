@@ -4,11 +4,11 @@
 [pypi-badge]: https://img.shields.io/pypi/v/pysrim-docker
 [pypi]: https://pypi.org/project/pysrim-docker
 
-Docker executor for PySRIM
-
 
 > [!WARNING]  
 > This package has been replaced by https://github.com/agoose77/pysrim-executor
+
+Docker executor for PySRIM
 
 ## Getting Started
 To use this package, simply replace your `SR` or `TRIM` imports with those from `srim.docker`, e.g.
